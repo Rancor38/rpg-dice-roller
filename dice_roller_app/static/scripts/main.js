@@ -19,7 +19,12 @@ const d8 = document.querySelector('#d8')
 const d10 = document.querySelector('#d10')
 const d12= document.querySelector('#d12')
 const d20= document.querySelector('#d20')
-const d100= document.querySelector('#d100')
+const d100 = document.querySelector('#d100')
+
+// results and total
+
+let result = document.getElementById('result')
+let total = document.getElementById('total')
 
 // //roll and reset
 const roll = document.querySelector('#roll')
@@ -48,7 +53,7 @@ d20.addEventListener('click', () => {selectDice(20)})
 d100.addEventListener('click', () => {selectDice(100)})
 
 roll.addEventListener('click', () => {rollDice(diceType, quantity)})
-reset.addEventListener('click', () => { console.log('clicked') })
+reset.addEventListener('click', () => { resetDice()})
 
 // the type of dice
 let diceType = 0;
@@ -68,5 +73,11 @@ const selectQuantity = (q) => {
 // roll a dice function
 const rollDice = (diceType, quantity) => {
     const rolledNum = Math.ceil(Math.random() * diceType)
-    console.log(rolledNum)
+    result.innerText = rolledNum
+    return result
+}
+// reset function
+const resetDice = () => {
+    result.innerText = 0
+    return result
 }
