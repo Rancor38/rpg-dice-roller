@@ -10,6 +10,7 @@ const q7 = document.querySelector('#seven')
 const q8 = document.querySelector('#eight')
 const q9 = document.querySelector('#nine')
 const q10 = document.querySelector('#ten')
+const currentDiceQ = document.querySelector('#currentDiceQ ')
 
 // //dice type
 const d2 = document.querySelector('#d2')
@@ -26,9 +27,10 @@ const d100 = document.querySelector('#d100')
 let result = document.getElementById('result')
 let total = document.getElementById('total')
 
-// //roll and reset
+// //roll and reset and resetQ
 const roll = document.querySelector('#roll')
 const reset = document.querySelector('#reset')
+const resetQ = document.querySelector('#resetQ')
 
 // //event listeners
 q1.addEventListener("click", () => {selectQuantity(1)})
@@ -53,7 +55,8 @@ d20.addEventListener('click', () => {selectDice(20)})
 d100.addEventListener('click', () => {selectDice(100)})
 
 roll.addEventListener('click', () => {rollDice(diceType, quantity)})
-reset.addEventListener('click', () => { resetDice()})
+reset.addEventListener('click', () => {resetDice()})
+resetQ.addEventListener('click', () => {resetQuantity()})
 
 // the type of dice
 let diceType = 0;
@@ -63,21 +66,31 @@ const selectDice = (num) => {
     return diceType
 } 
 // the quantity of dice
-let quantity = 0
+let quantity = 1;
 // selectQuantity
 const selectQuantity = (q) => {
-    quantity = q
-    return quantity 
+    quantity += q
+    return (quantity) && (currentDiceQ.innerText = quantity)
 }
+
+// all numbers rolled
+let rolledNumArr = []
 
 // roll a dice function
 const rollDice = (diceType, quantity) => {
-    const rolledNum = Math.ceil(Math.random() * diceType)
-    result.innerText = rolledNum
-    return result
+    resetDice()
+    for (let i = 0; i < quantity; i+=1) {
+        const rolledNum = Math.ceil(Math.random() * diceType)
+        rolledNumArr.push(rolledNum)
+        result.innerText = rolledNumArr
+    }
 }
-// reset function
+
+// resetDice function
 const resetDice = () => {
-    result.innerText = 0
-    return result
+    return (rolledNumArr = []) && (result.innerText = rolledNumArr)
+}
+//  resetQ
+const resetQuantity = () => {
+    return (quantity = 1) && (currentDiceQ.innerText = quantity)
 }
