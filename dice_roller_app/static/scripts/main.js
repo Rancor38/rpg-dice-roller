@@ -10,7 +10,7 @@ const q7 = document.querySelector('#seven')
 const q8 = document.querySelector('#eight')
 const q9 = document.querySelector('#nine')
 const q10 = document.querySelector('#ten')
-const currentDiceQ = document.querySelector('#currentDiceQ ')
+const currentDiceQ = document.querySelector('#currentDiceQ')
 
 // //dice type
 const d2 = document.querySelector('#d2')
@@ -63,10 +63,13 @@ let diceType = 0;
 // selectDice Function
 const selectDice = (num) => {
     diceType = num
+    if (quantity === 0) {
+        selectQuantity(1)
+    }
     return diceType
 } 
 // the quantity of dice
-let quantity = 1;
+let quantity = 0;
 // selectQuantity
 const selectQuantity = (q) => {
     quantity += q
@@ -82,15 +85,21 @@ const rollDice = (diceType, quantity) => {
     for (let i = 0; i < quantity; i+=1) {
         const rolledNum = Math.ceil(Math.random() * diceType)
         rolledNumArr.push(rolledNum)
-        result.innerText = rolledNumArr
+        result.textContent = rolledNumArr
     }
+    totalFunction()
 }
-
 // resetDice function
 const resetDice = () => {
-    return (rolledNumArr = []) && (result.innerText = rolledNumArr)
+    return (rolledNumArr = []) && (result.innerText = rolledNumArr) && (total.innerText = null)
 }
 //  resetQ
 const resetQuantity = () => {
-    return (quantity = 1) && (currentDiceQ.innerText = quantity)
+    return (quantity = 0), (currentDiceQ.innerText = quantity)
+}
+
+//add up all dice 
+const totalFunction = () => {
+    total.innerText = rolledNumArr.reduce((prev, curr) => prev + curr);
+
 }

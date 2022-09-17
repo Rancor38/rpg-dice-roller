@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
- <h1>RPG-DICE-ROLLER</h1>
- <section class="quantity">
+<div class="parent">
+ <h1 class="div1">RPG-DICE-ROLLER</h1>
+ <section class="div2">
     <h2> Dice Quantity</h2>
+    <div class="pad">
         <button type="button" class="btn btn-primary" id="one">1</button>
         <button type="button" class="btn btn-primary" id="two">2</button>
         <button type="button" class="btn btn-primary" id="three">3</button>
@@ -12,14 +14,17 @@
         <button type="button" class="btn btn-primary" id="seven">7</button>
         <button type="button" class="btn btn-primary" id="eight">8</button>
         <button type="button" class="btn btn-primary" id="nine">9</button>
-        <button type="button" class="btn btn-primary" id="ten">10</button>  
+        <button type="button" class="btn btn-primary" id="ten">10</button>
+        </div>  
+        <button type="button" class="btn btn-info" id="resetQ">Reset Quantity</button> 
  </section>
- <section> <button type="button" class="btn btn-info" id="resetQ">Reset Quantity</button> 
- <h2>Current Dice Quantity</h2>
- <h2 id="currentDiceQ">1</h2>
+ <section class="div3"> 
+ <h2>Current Dice Quantity:</h2>
+ <h2 id="currentDiceQ">0</h2>
  </section>
- <section class="dice">
-    <h2>Die Type<h2>
+ <section class="div4 dice">
+    <h2>Die Type</h2>
+    <div class="pad">
         <button type="button" class="btn btn-success" id="d2">d2</button>
         <button type="button" class="btn btn-success" id="d4">d4</button>
         <button type="button" class="btn btn-success" id="d6">d6</button>
@@ -28,19 +33,22 @@
         <button type="button" class="btn btn-success" id="d12">d12</button>
         <button type="button" class="btn btn-success" id="d20">d20</button>
         <button type="button" class="btn btn-success" id="d100">d100</button>
-    </section>
-    <section class="roll-reset">
+        </div>
+        <section class=" roll-reset">
         <button type="button" class="btn btn-info" id="roll">Roll</button>
         <button type="button" class="btn btn-info" id="reset">Reset</button>
     </section>
-    <main class="results">
-        <section>
-            <h2>Results:<h2>
-            <ul id="result"><ul>
+    </section>
+    <main class="div5">
+        <section class="results">
+            <h2>Results:</h2>
+            <h2 id="result"></h2>
         </section>
-        <section>
-            <h2>Total<h2>
-            <h2 id="total">0<h2>
+        <section class="total">
+            <h2>Total:</h2>
+            <h2 id="total"></h2>
         </section>
     </main>
+
+</div>
 {% endblock %}
