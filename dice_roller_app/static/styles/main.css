@@ -6,10 +6,80 @@ font-family: 'Poiret One', cursive;
 font-family: 'Source Code Pro', monospace;
 
 }
+
+.btn {
+    background: gray;
+    color: #000000;
+    border: solid;
+    border-width: 1px;
+    padding: 20px;
+    min-width: 60px;
+    margin: 5px;
+    outline: black;
+    border-radius: 15%;
+    box-shadow: 2px 2px 4px #000000;
+    background-image: linear-gradient(to bottom right, whitesmoke, darkgrey);
+}
+
+.btn:active{
+    box-shadow: none;   
+}
+
+body {
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+    background: #0f9bfe;
+	background-size: 3em 3em;
+	height: 100vh;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pad {
+    flex-wrap: wrap;
+}
+
+#reset {
+    border-radius: 0%;
+}
+
+#resetQ {
+    margin: 5px;
+    border-radius: 0%;
+}
+
+#result {
+    text-align: center;
+   
+   overflow-wrap: break-word;
+}
+
+#roll {
+    border-radius: 0%;
+}
+
+.roll-reset {
+    background-color: grey;
+        text-align: center;
+            display: flex;
+            flex-direction: column;
+}
+
 /* Flex Grid */
 .parent {
     display: grid;
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(6, 0.2fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -45,80 +115,7 @@ font-family: 'Source Code Pro', monospace;
             flex-direction: column;
     }
 
-/* other styles */
-
-.pad {
-    flex-wrap: wrap;
-}
-
-body {
-    color: whitesmoke;
-    text-shadow: 2px 2px 4px black;
-    background: #0f9bfe;
-	background-size: 3em 3em;
-	height: 100vh;
-}
-
-#result {
-    text-align: center;
-   
-   overflow-wrap: break-word;
-}
-
-button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    outline: inherit;
-}
-
-.btn {
-    background: gray;
-    color: #000000;
-    border: solid;
-    border-width: 1px;
-    padding: 20px;
-    min-width: 60px;
-    margin: 5px;
-    outline: black;
-    border-radius: 15%;
-    box-shadow: 2px 2px 4px #000000;
-    background-image: linear-gradient(to bottom right, whitesmoke, darkgrey);
-}
-
-.btn:active{
-    box-shadow: none;
-
-    
-}
-
-#resetQ {
-    margin: 5px;
-    border-radius: 0%;
-}
-
-#roll {
-    border-radius: 0%;
-}
-
-.roll-reset {
-    background-color: grey;
-        text-align: center;
-            display: flex;
-            flex-direction: column;
-}
-
-#reset {
-    border-radius: 0%;
-}
-
-h1 {
-    text-align: center;
-}
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
     .div2 { grid-area: 2 / 1 / 3 / 2;
     }
     /* start row, start column, end row, end column */
@@ -127,6 +124,6 @@ h1 {
     .div4 { grid-area: 2 / 2 / 4 / 3; 
     }
     .div5 { grid-area: 2 / 3 / 4 / 4; 
-        inline-size: 30vw;
+        inline-size: 33vw;
     }
 }
