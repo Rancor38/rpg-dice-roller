@@ -3,7 +3,7 @@
 RPG-Dice-Roller is an application for rolling polyhedral dice for tabletop rollplaying games.
 
 
-## PICTURES OF WEBSITE HERE
+## PICTURE OF WEBSITE HERE
 <img width="1427" alt="Screenshot 2022-09-20 at 5 11 57 PM" src="https://user-images.githubusercontent.com/105610124/191386507-17a0f41f-ee3d-49e4-ad27-3098e03b3e3c.png">
 
 ## TECHNOLOGIES USED
