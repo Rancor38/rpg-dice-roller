@@ -10,7 +10,7 @@ RPG-Dice-Roller is an application for rolling polyhedral dice for tabletop rollp
 The application is built in [Django](https://www.djangoproject.com/), a [Python-based](https://www.python.org/downloads/) framework with its own template language, and uses [HTML](https://html.spec.whatwg.org/multipage/), [CSS](https://www.w3.org/TR/CSS/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for the user end of the application. The app was published on [Heroku](https://www.heroku.com/).
 
 ## WIREFRAME
-The application was always panned to be a single-page web application; this wirecframe was created in [Google Slides](https://www.google.com/slides/about/).
+The application was always panned to be a single-page web application; this wireframe was created in [Google Slides](https://www.google.com/slides/about/).
 ![alt text](https://github.com/Rancor38/rpg-dice-roller/blob/main/public/RPG-DICE.png?raw=true)
 
 ## USER STORIES
