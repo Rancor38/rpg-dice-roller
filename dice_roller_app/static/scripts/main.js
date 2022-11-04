@@ -1,4 +1,12 @@
 // cached variables 
+
+// sounds
+const rollSound = new Audio('audioAddressHere')
+// an array os sounds
+const soundArr = []
+// play an array of souns
+// const variable_name = sound.play()
+
 //quantities
 const q1 = document.querySelector('#one')
 const q2 = document.querySelector('#two')
