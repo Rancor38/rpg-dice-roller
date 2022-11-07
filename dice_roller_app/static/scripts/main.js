@@ -5,7 +5,7 @@ const rollSound = new Audio('audioAddressHere')
 // an array os sounds
 const soundArr = []
 // play an array of souns
-// const variable_name = sound.play()
+// const variable_name = rollSound.play()
 
 //quantities
 const q1 = document.querySelector('#one')
