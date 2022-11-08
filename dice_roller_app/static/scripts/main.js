@@ -1,7 +1,7 @@
 // cached variables 
 
 // sounds
-const rollSound = new Audio('audioAddressHere')
+// const rollSound = new Audio('audioAddressHere')
 // an array os sounds
 const soundArr = []
 // play an array of souns
@@ -64,7 +64,27 @@ d100.addEventListener('click', () => {selectDice(100)})
 
 roll.addEventListener('click', () => {rollDice(diceType, quantity)})
 reset.addEventListener('click', () => {resetDice()})
-resetQ.addEventListener('click', () => {resetQuantity()})
+resetQ.addEventListener('click', () => { resetQuantity() })
+
+// write a func that adds a div we shape in css behind the total
+// const removeShape = () => {
+//     document.querySelectorAll(".sticker").forEach(el => el.remove())
+// }
+// const totalDesign = document.getElementById("total")
+// const div5 = document.getElementsByClassName("div5")
+
+// const addShape = () => {
+//     const para = document.createElement("div")
+//     para.innerHTML = "This is a shape"
+//     let findDiv = document.body.firstChild.nextSibling
+//     console.log(findDiv)
+//     document.body.appendChild(para).classList.add("sticker")
+//     document.body.appendChild(para).classList.add("d4")
+//     // totalDesign.parentNode.insertBefore("div", totalDesign.nextSibling)
+// }
+
+
+
 
 // the type of dice
 let diceType = 0;
@@ -99,6 +119,8 @@ const rollDice = (diceType, quantity) => {
 }
 // resetDice function
 const resetDice = () => {
+    if (document.getElementsByClassName("sticker")) {
+    }
     return (rolledNumArr = []) && (result.innerText = rolledNumArr) && (total.innerText = null)
 }
 //  resetQ
@@ -109,5 +131,6 @@ const resetQuantity = () => {
 //add up all dice 
 const totalFunction = () => {
     total.innerText = rolledNumArr.reduce((prev, curr) => prev + curr);
-
 }
+
+// Change the shape of a given button, to the silhouette of the die
