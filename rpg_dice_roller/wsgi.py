@@ -11,10 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-path = '/home/path/to/project'
-if path not in os.path:
-    os.path.append(path)
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rpg_dice_roller.settings')
 
 application = get_wsgi_application()
