@@ -1,1 +1,1 @@
-web: gunicorn rpg_dice_roller.wsgi
+web: gunicorn rpg_dice_roller.wsgi --log-file -
