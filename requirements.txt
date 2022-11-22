@@ -33,3 +33,4 @@ tornado==6.2
 traitlets==5.4.0
 virtualenv==20.16.5
 wcwidth==0.2.5
+whitenoise==6.2.0
